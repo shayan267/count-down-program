@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* div{
+          
+          
+           
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+             } */
+             h1{
+                font-family: sans-serif;
+                font-weight: bold;
+                color: rgb(15, 0, 0); 
+                font-size: large;              
+             }
+             p{
+                font-family: sans-serif;
+                font-weight: bold;
+                color: rgb(200, 255, 50); 
+                font-size:xx-large;
+                align-items: center; 
+                margin-top: 40px;
+                font-size: xx-large;
+                
+             }
+             body{  
+                background-image: url('background.jpg') ;
+                background-size: cover;
+                height: 100vh;
+                width: 100vw;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+             
+
+             }
+             /* .count{margin-top: 70px;
+                height: 100px;
+                width: 100px;
+                font-size: 60px;
+                align-items: center;
+                border: 1px;
+                background-image: linear-gradient(skyblue,yellow);
+                border-radius: 5px;
+                color: white;
+                line-height: 100px;
+                display: flex;
+                
+
+             } */
+             .count {
+                width: 100%;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               flex-wrap: wrap;
+                    }
+
+             .count div{
+                width: 180px;
+                height: 180px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-direction: column;
+                margin: 20px;
+                font-size: 7em;
+                color: rgba(37, 38, 24, 0.783);
+                /* background-color: rgb(65, 172, 218); */
+                background-image: linear-gradient(skyblue,yellow);
+                backdrop-filter: blur(20px);
+                border: 2px solid rgb(97, 85, 85);
+                box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.4);
+                border-radius: 20px;
+                margin-top: 250px;
+                
+             }
+             
+    </style>
+</head>
+<body>
+    <div>
+        <p>COUNTDOWN OF DURGA PUJA BEGINS:</p>
+        <!-- <div id="count">
+          
+            <div>
+                <span id="day">00</span>
+                <h1>Days</h1>
+            </div>
+            <div>
+                <span id="hour">00</span>
+                <h1>Hours</h1>
+            </div>
+            <div>
+                <span id="minute">00</span>
+                <h1>Minutes</h1>
+            </div>
+            <div>
+                <span id="second">00</span>
+                <h1>Seconds</h1>
+            </div>
+       
+        </div> -->
+        <div class="count">
+            <div>
+                <span id="day">00</span>
+                <h1>Days</h1>
+            </div>
+            <div>
+                <span id="hour">00</span>
+                <h1>Hrs</h1>
+            </div>
+            <div>
+                <span id="minute">00</span>
+                <h1>Mins</h1>
+            </div>
+            <div>
+                <span id="second">00</span>
+                <h1>Sec</h1>
+            </div>
+
+        </div>
+    </div>
+   <script>
+    var dest = new Date("dec 19, 2023 00:00:00");
+    var x = setInterval(function(){
+    var now = new Date().getTime();
+    var diff = dest - now;
+    var days = Math.floor(diff/(1000*24*60*60));
+    /* console.log(days); */
+    var hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+    /* console.log(hours); */
+    var minutes = Math.floor((diff % (1000*60*60)) / (1000*60));
+    /* console.log(minutes); */
+    var seconds = Math.floor((diff % (1000*60)) / (1000));
+    /* console.log(seconds); */
+    /* Document.getElementById("count").innerHTML= days +"d," + hours +"hrs: "+minutes +"mins: "+ seconds+"s" */
+    document.getElementById("day").innerHTML=days;
+    document.getElementById("hour").innerHTML=hours;
+    document.getElementById("minute").innerHTML=minutes;
+    document.getElementById("second").innerHTML=seconds;
+    console.log(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+
+    },1000);
+
+   </script> 
+</body>
+</html>S
