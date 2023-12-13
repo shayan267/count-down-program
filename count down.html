@@ -4,21 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
+    <style> /*CSS PART*/
         *{
             margin: 0;
             padding: 0;
         }
-        /* div{
-          
-          
-           
-            
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            
-             } */
+      
              h1{
                 font-family: sans-serif;
                 font-weight: bold;
@@ -48,20 +39,7 @@
              
 
              }
-             /* .count{margin-top: 70px;
-                height: 100px;
-                width: 100px;
-                font-size: 60px;
-                align-items: center;
-                border: 1px;
-                background-image: linear-gradient(skyblue,yellow);
-                border-radius: 5px;
-                color: white;
-                line-height: 100px;
-                display: flex;
-                
-
-             } */
+             
              .count {
                 width: 100%;
                display: flex;
@@ -89,32 +67,14 @@
                 margin-top: 250px;
                 
              }
-             
-    </style>
+          
+          </style> <!--CSS PART END-->
+    
 </head>
 <body>
-    <div>
+    <div> <!--HTML PART-->
         <p>COUNTDOWN OF DURGA PUJA BEGINS:</p>
-        <!-- <div id="count">
-          
-            <div>
-                <span id="day">00</span>
-                <h1>Days</h1>
-            </div>
-            <div>
-                <span id="hour">00</span>
-                <h1>Hours</h1>
-            </div>
-            <div>
-                <span id="minute">00</span>
-                <h1>Minutes</h1>
-            </div>
-            <div>
-                <span id="second">00</span>
-                <h1>Seconds</h1>
-            </div>
-       
-        </div> -->
+      
         <div class="count">
             <div>
                 <span id="day">00</span>
@@ -134,7 +94,7 @@
             </div>
 
         </div>
-    </div>
+    </div> <!--HTML PART END-->
    <script>
     var dest = new Date("dec 19, 2023 00:00:00");
     var x = setInterval(function(){
